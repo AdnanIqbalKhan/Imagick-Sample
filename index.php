@@ -2,9 +2,9 @@
 function filter($imagePath) {
     $imagick = new \Imagick(realpath($imagePath));
     $matrix = [
-        [0, -1, 0],
+        [-1, -1, -1],
         [-1, 5, -1],
-        [0, -1, 0],
+        [-1, -1, -1],
     ];
     
     $kernel = \ImagickKernel::fromMatrix($matrix);
